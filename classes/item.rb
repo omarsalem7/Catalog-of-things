@@ -1,9 +1,16 @@
 require 'date'
 class Item 
-    def initialize(publish_date,archived)
+    attr_reader :label
+    def initialize(publish_date,label,archived)
         @id = Random.rand(1..1000)
+        @label = label
         @publish_date = Date.parse(publish_date)
         @archived =archived
+    end
+
+    def label=(label)
+        @label=label
+        label.items.push(self) unless label.animals.include?(self)
     end
 
     def can_be_archived?
