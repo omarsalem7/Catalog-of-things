@@ -1,6 +1,6 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Title
+# Catalog of things
 
 > Description of the project
 
