@@ -1,6 +1,8 @@
 require 'date'
+
 class Item
-  attr_reader :id, :archived, :label, :author
+
+  attr_reader :id, :archived, :label, :genre :author
 
   attr_accessor :publish_date
 
@@ -10,6 +12,12 @@ class Item
     @author = nil
     @publish_date = Date.parse(publish_date)
     @archived = archived
+    @genre = nil
+  end
+
+  def add_genre=(genre)
+    @genre = genre
+    genre.items.push(self) unless genre.items.include?(self)
   end
 
   def label=(label)
