@@ -1,4 +1,4 @@
-![](https://img.shields.io/badge/Catalog-OF-Things-blue)
+![](https://img.shields.io/badge/Catalog-Things-redViolet)
 
 # Catalog of things
 
