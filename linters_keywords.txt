@@ -1,2 +1,2 @@
-rubocop    => check linters error 
-rubocop -A => fix linetrs errors 
+rubocop    => check linter errors 
+rubocop -A => fix linter errors 
