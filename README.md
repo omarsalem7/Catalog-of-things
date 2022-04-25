@@ -1,4 +1,4 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
+![](https://img.shields.io/badge/Catalog-OF-Things-blue)
 
 # Catalog of things
 
@@ -26,6 +26,12 @@ $ bundle install
 - GitHub: [Omar Salem](https://github.com/omarsalem7)
 - Twitter: [Omar Salem](https://twitter.com/Omar80491499)
 - LinkedIn: [Omar Salem](https://www.linkedin.com/in/omar-salem-a6945b177/)
+
+👤 **Bertrand Mutangana Ishimwe**
+
+- GitHub: [@BertrandConxy](https://github.com/BertrandConxy)
+- Twitter: [@Bconxy](https://twitter.com/BertrandMutanga)
+- LinkedIn: [Bertrand Mutangana Ishimwe](https://www.linkedin.com/in/bertrandmutangana)
 
 
 ## 🤝 Contributing
