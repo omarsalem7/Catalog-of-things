@@ -1,0 +1,5 @@
+require './book'
+require './genre'
+require './music_album'
+require './item'
+require './label'
