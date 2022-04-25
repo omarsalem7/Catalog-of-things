@@ -27,6 +27,11 @@ $ bundle install
 - Twitter: [Omar Salem](https://twitter.com/Omar80491499)
 - LinkedIn: [Omar Salem](https://www.linkedin.com/in/omar-salem-a6945b177/)
 
+👤 **Daniel Yerimah**
+- GitHub: [@Daniel Yerimah](https://github.com/yerimah)
+- Twitter: [@iamdeewyne](https://twitter.com/iamdeewyne)
+- LinkedIn: [@Daniel Yerimah](https://linkedin.com/in/daniel-yerimah)
+
 
 ## 🤝 Contributing
 
