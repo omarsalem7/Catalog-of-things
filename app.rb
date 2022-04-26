@@ -1,9 +1,11 @@
 require './classes/modules/games_module.rb'
+require './classes/modules/genre_module'
 
 
 class App
     def initialize
         @games = GameModule.new
+        @genre = GenreModule.new
     end
 
     def user_interface
@@ -12,7 +14,9 @@ class App
                 1.List all games
                 2.List all authors
                 3.Add a game
-                4.Exit"
+                4.List all genres
+                5.Add genres
+                6.Exit"
     end
 
     def options
