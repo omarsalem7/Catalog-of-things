@@ -1,1 +1,32 @@
-[{"publisher":"dsa","cover_state":"good","publish_date":"2022-5-5","label":"Gift"},{"publisher":"rrr","cover_state":"bad","publish_date":"2011-9-9","label":"cars"},{"publisher":"oas","cover_state":"bad","publish_date":"2000-5-17","label":"Gift"},{"publisher":"omar","cover_state":"good","publish_date":"1999-7-21","label":"fun"},{"publisher":"yassin","cover_state":"good","publish_date":"200-5-7","label":"discount"},{"publisher":"test","cover_state":"bad","publish_date":"1858-5-5","label":"Gift"},{"publisher":"www","cover_state":"good","publish_date":"2000-4-6","label":"Gift"}]
+[
+    {
+        "publisher": "dsa",
+        "cover_state": "good",
+        "publish_date": "2022-5-5",
+        "label": "Gift"
+    },
+    {
+        "publisher": "rrr",
+        "cover_state": "bad",
+        "publish_date": "2011-9-9",
+        "label": "cars"
+    },
+    {
+        "publisher": "oas",
+        "cover_state": "bad",
+        "publish_date": "2000-5-17",
+        "label": "Gift"
+    },
+    {
+        "publisher": "omar",
+        "cover_state": "good",
+        "publish_date": "1999-7-21",
+        "label": "fun"
+    },
+    {
+        "publisher": "yassin",
+        "cover_state": "good",
+        "publish_date": "200-5-7",
+        "label": "discount"
+    }
+]
