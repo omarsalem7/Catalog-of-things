@@ -25,7 +25,7 @@ class BookModule
     puts 'Select which label the book should have:'
     @labels.list_labels
     label_index = gets.chomp.to_i
-    book.label = my_labels[label_index-1]
+    book.label = my_labels[label_index - 1]
     @books << book
     puts 'The book added successfully 😊'
   end

@@ -12,6 +12,7 @@ class LabelModule
               { title: 'cars', color: 'red' },
               { title: 'fun', color: 'yellow' }]
     return unless @labels.empty?
+
     labels.each do |label|
       @labels.push(Label.new(label[:title], label[:color]))
     end
@@ -19,7 +20,7 @@ class LabelModule
 
   def list_labels
     @labels.each_with_index do |label, index|
-      puts "#{index+1}) title: #{label.title}, color: #{label.color}"
+      puts "#{index + 1}) title: #{label.title}, color: #{label.color}"
     end
   end
 end
