@@ -1,7 +1,7 @@
-# main file for programe
+require_relative './classes/modules/book_label_app.rb/book_label_app'
+def main
+  app1 = BookLabelApp.new
+  app1.menu_select
+end
 
-# def main
-#   app = App.new
-# end
-
-# main
+main
