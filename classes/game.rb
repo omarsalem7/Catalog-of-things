@@ -14,4 +14,15 @@ class Game < Item
     last_play = Time.now.year - last_played_at.year
     super && last_play > 2
   end
+
+  def to_hash(*_args)
+    {
+      'id' => @id,
+      'multiplayer' => @multiplayer,
+      'last_played_at' => @last_played_at,
+      'publish_date' => @publish_date,
+      'archived' => @archived,
+      'author first name' => self.author.first_name
+    }
+  end
 end

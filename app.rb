@@ -1,9 +1,11 @@
 require './classes/modules/games_module.rb'
+require './classes/modules/author_module.rb'
 
 
 class App
     def initialize
         @games = GameModule.new
+        @authors = AuthorModule.new
     end
 
     def user_interface
@@ -22,7 +24,7 @@ class App
         when '1'
             @games.list_all_games
         when '2'
-            puts 'they are coming soon'
+            @authors.list_all_authors
         when '3'
             @games.create_game
         when '4'
