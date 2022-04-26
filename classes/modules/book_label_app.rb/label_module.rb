@@ -7,10 +7,8 @@ class LabelModule
   end
 
   def populate_labels
-    labels = [{ title: 'Gift', color: 'oraneg' },
-              { title: 'discount', color: 'green' },
-              { title: 'cars', color: 'red' },
-              { title: 'fun', color: 'yellow' }]
+    file = File.read('./labels.json')
+    labels = JSON.parse(file, { symbolize_names: true })
     return unless @labels.empty?
 
     labels.each do |label|

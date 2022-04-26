@@ -5,9 +5,8 @@ require_relative './label_module'
 class BookLabelApp
   include UserInterface
   def initialize
-    @books = []
     @labels = LabelModule.new
-    @books = BookModule.new({ labels: @labels, books: @books })
+    @books = BookModule.new(@labels)
   end
 
   def menu_select
