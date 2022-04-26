@@ -1,7 +1,8 @@
 require './classes/modules/games_module'
 require './classes/modules/genre_module'
 require './classes/modules/music_album.module'
-
+require './classes/modules/games_module.rb'
+require './classes/modules/author_module.rb'
 
 class App
     attr_accessor :genre
@@ -10,6 +11,7 @@ class App
         @games = GameModule.new
         @genre = GenreModule.new
         @music_album = MusicAlbumModule.new
+        @authors = AuthorModule.new
     end
 
     def user_interface
@@ -31,7 +33,7 @@ class App
         when '1'
             @games.list_all_games
         when '2'
-            puts 'they are coming soon'
+            @authors.list_all_authors
         when '3'
             @games.create_game
         when '4'
