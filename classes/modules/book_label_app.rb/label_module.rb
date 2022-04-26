@@ -24,5 +24,3 @@ class LabelModule
     end
   end
 end
-
-# puts "#{index + 1}) title: #{label[:title]}, color: #{label[:color]}"
