@@ -1,11 +1,15 @@
-require './classes/modules/games_module.rb'
+require './classes/modules/games_module'
 require './classes/modules/genre_module'
+require './classes/modules/music_album.module'
 
 
 class App
+    attr_accessor :genre
+
     def initialize
         @games = GameModule.new
         @genre = GenreModule.new
+        @music_album = MusicAlbumModule.new
     end
 
     def user_interface
@@ -15,8 +19,9 @@ class App
                 2.List all authors
                 3.Add a game
                 4.List all genres
-                5.Add genres
-                6.Exit"
+                5.List all music
+                6.Add music album
+                7.Exit"
     end
 
     def options
@@ -30,6 +35,10 @@ class App
         when '3'
             @games.create_game
         when '4'
+            @genre.create_genre
+        when '5'
+            @music_album.list_music_album
+        when '6'
             puts 'Thank you for using the app!'
             exit
         else
