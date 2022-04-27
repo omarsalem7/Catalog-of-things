@@ -7,9 +7,9 @@ class MusicAlbumModule
   attr_accessor :music_album
   attr_reader :genre_module
 
-  def initialize
+  def initialize(genre)
     @music_album = []
-    @genre_module = genre_module
+    @genre = genre
   end
 
   def list_music_album
@@ -34,8 +34,7 @@ class MusicAlbumModule
     puts 'Select music gnere'
     @genre.list_all_genres
     genre_index = gets.chomp.to_i
-    
-    album.genre = all_genres[genre_index]
+
     @music_album << album
 
     puts 'Music album is successfully added to catalog'

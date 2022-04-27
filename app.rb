@@ -9,7 +9,7 @@ class App
   def initialize
     @games = GameModule.new
     @genre = GenreModule.new
-    @music_album = MusicAlbumModule.new
+    @music_album = MusicAlbumModule.new(@genre)
     @authors = AuthorModule.new
   end
 

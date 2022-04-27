@@ -17,7 +17,6 @@ class GenreModule
   end
 
   def list_all_genres
-    puts 'database is empty! Add a music genre.' if @genre.empty?
     @genre.each_with_index do |genre, index|
       puts "(#{index + 1}) ID: #{genre.id} - Genre Name: #{genre.name}"
     end
