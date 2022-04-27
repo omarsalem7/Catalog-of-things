@@ -22,7 +22,7 @@ class Game < Item
       'last_played_at' => @last_played_at,
       'publish_date' => @publish_date,
       'archived' => @archived,
-      'author first name' => self.author.first_name
+      'author first name' => author.first_name
     }
   end
 end
