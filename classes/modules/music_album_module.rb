@@ -34,7 +34,7 @@ class MusicAlbumModule
     puts 'Select music gnere'
     @genre.list_all_genres
     genre_index = gets.chomp.to_i
-
+    
     @music_album << album
 
     puts 'Music album is successfully added to catalog'
