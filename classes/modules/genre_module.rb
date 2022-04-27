@@ -7,6 +7,12 @@ class GenreModule
     @genre = []
   end
 
+  def populate_genres
+    return unless @genre.empty?
+
+    @genre.push(Genre.new('fun'))
+  end
+
   def create_genre
     puts 'Enter the music genre'
     name = gets.chomp

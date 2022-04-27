@@ -6,8 +6,6 @@ puts 'Welcome to the Catalog of things app'
 def main
   app = App.new
   app.options
-  app1 = BookLabelApp.new
-  app1.menu_select
 end
 
 main

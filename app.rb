@@ -29,6 +29,7 @@ class App
   def options
     user_interface
     selection = gets.chomp
+    @genre.populate_genres
     case selection
     when '1'
       @games.list_all_games

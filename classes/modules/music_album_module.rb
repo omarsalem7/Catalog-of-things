@@ -17,7 +17,7 @@ class MusicAlbumModule
     @music_album.each_with_index do |music_album, index|
       puts "(#{index}) publish Date: #{music_album.publish_date},
         Archived: #{music_album.archived}, On Spotify: #{music_album.on_spotify},
-        Genre: #{music_album.genre}"
+        Genre: #{music_album.genre.name}"
     end
   end
 
@@ -26,15 +26,19 @@ class MusicAlbumModule
     publish_date = gets.chomp
 
     puts 'Is it on spotify? (Y/N)'
-    on_spotify = gets.chomp.downcase != 'y'
+    on_spotify = gets.chomp.downcase == 'y'
     puts 'Is it archived? (Y/N)'
-    archived = gets.chomp.downcase != 'y'
+    archived = gets.chomp.downcase == 'y'
 
     album = MusicAlbum.new(publish_date, archived, on_spotify)
-    puts 'Select music gnere'
-    @genre.list_all_genres
-    genre_index = gets.chomp.to_i
 
+    puts "You haven't genre in your list now, yoo can add one" if @genre.genre.empty?
+    if @genre.genre.length.positive?
+      puts 'Select music gnere'
+      @genre.list_all_genres
+      genre_index = gets.chomp.to_i
+      album.genre = @genre.genre[genre_index - 1]
+    end
     @music_album << album
 
     puts 'Music album is successfully added to catalog'
