@@ -36,3 +36,23 @@ CREATE TABLE book(
   CONSTRAINT fk_book FOREIGN KEY (label_id) REFERENCES label (id) ON DELETE CASCADE,
   PRIMARY KEY(id)
 );
+
+-- Create Game table
+CREATE TABLE game(
+  id INT GENERATED ALWAYS AS IDENTITY,
+  multiplayer VARCHAR(5),
+  last_played_at DATE,
+  publish_date DATE,
+  archived BOOLEAN,
+  author_id INT,
+  CONSTRAINT fk_game FOREIGN KEY (author_id) REFERENCES author(id) ON DELETE CASCADE,
+  PRIMARY KEY(id)
+);
+
+-- Create Author table
+CREATE TABLE game(
+ id INTEGER GENERATED ALWAYS AS IDENTITY,
+ first_name VARCHAR(50),
+ last_name VARCHAR(50),
+ PRIMARY KEY(id)
+);
