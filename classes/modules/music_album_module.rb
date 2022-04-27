@@ -16,7 +16,7 @@ class MusicAlbumModule
     puts 'Album database is empty. Add a new music album' if @music_album.empty?
     @music_album.each_with_index do |music_album, index|
       puts "(#{index}) publish Date: #{music_album.publish_date},
-        Archived: #{music_album.achived}, On Spotify: #{music_album.on_spotify},
+        Archived: #{music_album.archived}, On Spotify: #{music_album.on_spotify},
         Genre: #{music_album.genre}"
     end
   end
@@ -34,7 +34,7 @@ class MusicAlbumModule
     puts 'Select music gnere'
     @genre.list_all_genres
     genre_index = gets.chomp.to_i
-    
+
     @music_album << album
 
     puts 'Music album is successfully added to catalog'
