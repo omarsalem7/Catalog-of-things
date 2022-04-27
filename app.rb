@@ -1,8 +1,7 @@
-require './classes/modules/games_module'
-require './classes/modules/genre_module'
-require './classes/modules/music_album.module'
 require './classes/modules/games_module.rb'
 require './classes/modules/author_module.rb'
+require './classes/modules/genre_module'
+require './classes/modules/music_album_module'
 
 class App
     attr_accessor :genre
