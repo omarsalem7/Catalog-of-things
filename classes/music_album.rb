@@ -1,7 +1,7 @@
 require_relative 'item'
 
 class MusicAlbum < Item
-  attr_accessor :on_spotify
+  attr_accessor :on_spotify, :archived
 
   def initialize(publish_date, archived, on_spotify)
     super(publish_date, archived)
