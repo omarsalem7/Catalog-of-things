@@ -1,5 +1,3 @@
-#!/usr/bin/env ruby
-
 # main file for programe
 require './app'
 

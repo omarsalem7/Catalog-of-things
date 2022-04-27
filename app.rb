@@ -40,9 +40,9 @@ class App
       @genre.list_all_genres
     when '5'
       @genre.create_genre
-    when '6'  
+    when '6'
       @music_album.list_music_album
-    when '7'  
+    when '7'
       @music_album.add_music_album
     when '8'
       puts 'Thank you for using the app!'
