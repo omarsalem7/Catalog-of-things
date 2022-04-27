@@ -1,9 +1,8 @@
 # main file for programe
 require './app'
-require_relative './classes/modules/book_label_app.rb/book_label_app'
-puts 'Welcome to the Catalog of things app'
 
 def main
+  puts 'Welcome to the Catalog of things app'
   app = App.new
   app.options
 end
