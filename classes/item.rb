@@ -16,14 +16,10 @@ class Item
 
   def genre=(genre)
     @genre = genre
-    p "inside item genre: #{genre}"
-    p "genre.items: #{genre.items}"
     genre.items.push(self) unless genre.items.include?(self)
-    p "genre.items: #{genre.items}"
   end
 
   def label=(label)
-    p "label.items: #{label.items}"
     @label = label
     label.items.push(self) unless label.items.include?(self)
   end
