@@ -13,7 +13,7 @@ class App
     @genre = GenreModule.new
     @music_album = MusicAlbumModule.new(@genre)
     @authors = AuthorModule.new
-    @labels = LabelModule.new
+    @labels = LabelModule.new()
     @books = BookModule.new(@labels)
   end
 
@@ -54,7 +54,7 @@ class App
     hash_options = hash_options.merge(hash_options2, hash_options3, hash_options4)
 
     if hash_options.key?(selection)
-      @genre.populate_genres
+      # @genre.populate_genres
       @labels.populate_labels
       hash_options[selection].call
     else

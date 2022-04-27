@@ -2,20 +2,19 @@ require_relative '../music_album'
 require_relative 'music_album_menu'
 
 class MusicAlbumModule
-  include MusicAlbumMenu
 
   attr_accessor :music_album
   attr_reader :genre_module
 
   def initialize(genre)
-    file = File.read('./music.json')
-    @music_album = JSON.parse(file, { symbolize_names: true })
+    @music_album = []
     @genre = genre
   end
 
   def list_music_album
+    data=load_data
     puts 'Album database is empty. Add a new music album' if @music_album.empty?
-    @music_album.each_with_index do |music_album, index|
+    data.each_with_index do |music_album, index|
       puts "(#{index}) publish Date: #{music_album[:publish_date]},
         Archived: #{music_album[:archived]}, On Spotify: #{music_album[:on_spotify]},
         Genre name: #{music_album[:name]} "
@@ -36,13 +35,21 @@ class MusicAlbumModule
       puts 'Select music gnere'
       @genre.list_all_genres
       genre_index = gets.chomp.to_i
+      p "@genre.genres[genre_index - 1] : #{@genre.genres[genre_index - 1]}"
       album.genre = @genre.genres[genre_index - 1]
 
       p "album.genre: #{album.genre}"
     new_album = { publish_date: publish_date, archived: archived, on_spotify: on_spotify,
       name: album.genre.name }
-    @music_album << new_album
-    File.write('./music.json', JSON.dump(@music_album))
+    @music_album << album
+    data= load_data
+    data.push(new_album)
+    File.write('./music.json', JSON.dump(data))
     puts 'Music album is successfully added to catalog'
+  end
+  private 
+  def load_data
+    file = File.read('./books.json')
+    data_hash = JSON.parse(file, { symbolize_names: true })
   end
 end
