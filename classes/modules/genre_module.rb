@@ -1,4 +1,5 @@
 require_relative '../genre'
+require 'json'
 
 class GenreModule
   attr_accessor :genre
@@ -8,6 +9,7 @@ class GenreModule
   end
 
   def populate_genres
+    
     return unless @genre.empty?
 
     @genre.push(Genre.new('fun'))
@@ -24,7 +26,7 @@ class GenreModule
 
   def list_all_genres
     @genre.each_with_index do |genre, index|
-      puts "(#{index + 1}) ID: #{genre.id} - Genre Name: #{genre.name}"
+      puts "(#{index + 1}) ID: #{genre.id}, Genre Name: #{genre.name}"
     end
   end
 end
