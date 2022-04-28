@@ -1,26 +1,21 @@
 require_relative '../music_album'
-require_relative 'music_album_menu'
-require 'json'
 
 class MusicAlbumModule
-  include MusicAlbumMenu
-
   attr_accessor :music_album
   attr_reader :genre_module
 
   def initialize(genre)
-    @music_album = []
-    file = File.read('./music_album.json')
-    @music_album = JSON.parse(file)
+    file = File.read('./music.json')
+    @music_album = JSON.parse(file, { symbolize_names: true })
     @genre = genre
   end
 
   def list_music_album
     puts 'Album database is empty. Add a new music album' if @music_album.empty?
     @music_album.each_with_index do |music_album, index|
-      puts "(#{index}) publish Date: #{music_album['publish_date']},
-        Archived: #{music_album['archived']}, On Spotify: #{music_album['on_spotify']},
-        Genre: #{music_album['genre']}"
+      puts "(#{index}) publish Date: #{music_album[:publish_date]},
+        Archived: #{music_album[:archived]}, On Spotify: #{music_album[:on_spotify]},
+        Genre name: #{music_album[:name]} "
     end
   end
 
@@ -35,17 +30,14 @@ class MusicAlbumModule
 
     album = MusicAlbum.new(publish_date, archived, on_spotify)
 
-    puts "You haven't genre in your list now, yoo can add one" if @genre.genre.empty?
-    if @genre.genre.length.positive?
-      puts 'Select music gnere'
-      @genre.list_all_genres
-      genre_index = gets.chomp.to_i
-      album.genre = @genre.genre[genre_index - 1]
-    #   new_album = {publish_date: publish_date, archived: archived, on_spotify: on_spotify, genre: genre.name}
-    end
-    
-    @music_album << album
-    File.write('./music_album.json', JSON.dump(@music_album))
+    puts 'Select music gnere'
+    @genre.list_all_genres
+    genre_index = gets.chomp.to_i
+    album.genre = @genre.genres[genre_index - 1]
+    new_album = { publish_date: publish_date, archived: archived, on_spotify: on_spotify,
+                  name: album.genre.name }
+    @music_album << new_album
+    File.write('./music.json', JSON.dump(@music_album))
     puts 'Music album is successfully added to catalog'
   end
 end
