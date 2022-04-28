@@ -27,10 +27,9 @@ class App
                 5.List all authors
                 6.Add a game
                 7.List all genres
-                8.Add genre
-                9.List all music
-                10.Add music album
-                11.Exit"
+                8.List all music
+                9.Add music album
+                10.Exit"
     puts ' '
   end
 
@@ -45,11 +44,11 @@ class App
       @games.create_game
     } }
 
-    hash_options3 = { '7' => -> { @genre.list_all_genres }, '8' => -> { @genre.create_genre }, '9' => lambda {
+    hash_options3 = { '7' => -> { @genre.list_all_genres }, '8' => lambda {
       @music_album.list_music_album
     } }
 
-    hash_options4 = { '10' => -> { @music_album.add_music_album }, '11' => -> { exit } }
+    hash_options4 = { '9' => -> { @music_album.add_music_album }, '10' => -> { exit } }
 
     hash_options = hash_options.merge(hash_options2, hash_options3, hash_options4)
 

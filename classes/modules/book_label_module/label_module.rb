@@ -7,7 +7,7 @@ class LabelModule
   end
 
   def populate_labels
-    file = File.read('./labels.json')
+    file = File.read('./data/labels.json')
     labels = JSON.parse(file, { symbolize_names: true })
     return unless @labels.empty?
 
