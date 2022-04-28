@@ -24,8 +24,6 @@ class BookModule
     @labels.list_labels
     label_index = gets.chomp.to_i
     book = Book.new(publisher, state_result, date)
-    p "wrapper #{@labels.labels[label_index - 1]}"
-    p "list #{@labels.labels}"
     book.label = @labels.labels[label_index - 1]
     new_book = { publisher: publisher, cover_state: state_result, publish_date: date,
                  label: book.label.title }

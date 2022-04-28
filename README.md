@@ -2,7 +2,7 @@
 
 # Catalog of things
 
-> Description of the project
+> We designed a console software for this project that would let users to keep track of the many items they have won, such as books, music albums , and games. Everything was based on descriptive UML class diagram. The data will be kept as JSON files, but we've also created a database schema with tables that correspond to the program's class hierarchy.
 
 
 ## Built With
@@ -14,8 +14,8 @@
 To get a local copy up and running follow these simple steps.
 
 ```bash
-$ git clone https://github.com/omarsalem7/{ruby-name}
-$ cd {ruby-name}
+$ git clone https://github.com/omarsalem7/Catalog-of-things 
+$ cd Catalog-of-things 
 $ bundle install 
 ```
 
