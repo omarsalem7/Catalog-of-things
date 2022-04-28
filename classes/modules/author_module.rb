@@ -5,14 +5,22 @@ class AuthorModule
 
   def initialize
     @storage_file = './data/authors.json'
-    file = JSON.parse(File.read(@storage_file))
-    @authors = file.empty? ? [] : file
+    if File.exist?(@storage_file)
+      file = JSON.parse(File.read(@storage_file))
+      @authors = file.empty? ? [] : file
+    else
+      @authors = []
+    end
   end
 
   def list_all_authors
     puts 'Sorry, there are no authors available at the moment' if @authors.empty?
-    file = JSON.parse(File.read(@storage_file))
-    @authors = file
+    if File.exist?(@storage_file)
+      file = JSON.parse(File.read(@storage_file))
+      @authors = file
+    else
+      @authors = []
+    end
     puts "There are #{@authors.count} authors(s) in the system"
     @authors.each_with_index do |author, index|
       puts "#{index + 1}) ID: #{author['id']} | First name: #{author['first_name']} | Last name: #{author['last_name']}"
