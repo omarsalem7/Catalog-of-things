@@ -6,8 +6,8 @@ class MusicAlbumModule
 
   def initialize(genre)
     if File.exist?('./data/music_album.json')
-    file = File.read('./data/music_album.json')
-    @music_album = JSON.parse(file, { symbolize_names: true })
+      file = File.read('./data/music_album.json')
+      @music_album = JSON.parse(file, { symbolize_names: true })
     else
       @music_album = []
     end

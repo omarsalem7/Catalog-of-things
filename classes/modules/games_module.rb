@@ -9,8 +9,8 @@ class GameModule
   def initialize
     @storage_file = './data/games.json'
     if File.exist?(@storage_file)
-    file = JSON.parse(File.read(@storage_file))
-    @games = file.empty? ? [] : file
+      file = JSON.parse(File.read(@storage_file))
+      @games = file.empty? ? [] : file
     else
       @games = []
     end

@@ -8,8 +8,8 @@ class BookModule
   include UserInterface
   def initialize(labels)
     if File.exist?('./data/books.json')
-    file = File.read('./data/books.json')
-    @books = JSON.parse(file, { symbolize_names: true })
+      file = File.read('./data/books.json')
+      @books = JSON.parse(file, { symbolize_names: true })
     else
       @books = []
     end
