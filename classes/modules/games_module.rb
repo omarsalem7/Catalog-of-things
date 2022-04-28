@@ -16,8 +16,9 @@ class GameModule
     puts 'Sorry, there are no games available at the moment' if @games.empty?
     puts "There are #{@games.count} game(s) in the system"
     @games.each_with_index do |game, index|
-      puts "#{index + 1}) Game ID: #{game['id']} |
-      Multiplayer: #{game['multiplayer']} | Last played at: #{game['last_played_at']}"
+      print "#{index + 1}) Game ID: #{game['id']} | Multiplayer: #{game['multiplayer']} |"
+      print " Last played at: #{game['last_played_at']}"
+      puts ''
     end
   end
 
