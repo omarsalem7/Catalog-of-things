@@ -8,7 +8,6 @@
 ## Built With
 
 - Ruby
-- 💓
 
 # Get Started
 To get a local copy up and running follow these simple steps.
@@ -43,7 +42,7 @@ $ bundle install
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/omarsalem7/Catalog-of-things/issues/).
 
 ## Show your support
 
