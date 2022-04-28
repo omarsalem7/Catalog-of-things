@@ -4,6 +4,8 @@
 
 > We designed a console software for this project that would let users to keep track of the many items they have won, such as books, music albums , and games. Everything was based on descriptive UML class diagram. The data will be kept as JSON files, but we've also created a database schema with tables that correspond to the program's class hierarchy.
 
+# Screenshot
+![catalog2](https://user-images.githubusercontent.com/90222110/165717419-4c45c741-07bc-4f05-879d-253b277313ff.png)
 
 ## Built With
 
