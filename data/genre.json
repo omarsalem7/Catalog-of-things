@@ -1,18 +1,18 @@
 [
     {
     
-        "name" : "Thriller"
+        "name" : "RNB"
     },
     {
-        "name": "Action"
+        "name": "POP"
     },
     {
-        "name": "Comedy"
+        "name": "HIPHOP"
     },
     {
-        "name": "Drama"
+        "name": "RAP"
     },
     {
-        "name": "Romance"
+        "name": "EDM"
     }
 ]
