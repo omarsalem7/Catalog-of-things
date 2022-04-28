@@ -7,7 +7,7 @@ class BookModule
 
   include UserInterface
   def initialize(labels)
-    file = File.read('./books.json')
+    file = File.read('./data/books.json')
     @books = JSON.parse(file, { symbolize_names: true })
     @labels = labels
   end
@@ -30,7 +30,7 @@ class BookModule
     new_book = { publisher: publisher, cover_state: state_result, publish_date: date,
                  label: book.label.title }
     @books << new_book
-    File.write('./books.json', JSON.dump(@books))
+    File.write('./data/books.json', JSON.dump(@books))
     puts 'The book added successfully 😊'
   end
 

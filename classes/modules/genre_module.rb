@@ -8,7 +8,7 @@ class GenreModule
   end
 
   def populate_genres
-    file = File.read('./genre.json')
+    file = File.read('./data/genre.json')
     genres = JSON.parse(file, { symbolize_names: true })
     return unless @genres.empty?
 

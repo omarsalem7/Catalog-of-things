@@ -5,7 +5,7 @@ class MusicAlbumModule
   attr_reader :genre_module
 
   def initialize(genre)
-    file = File.read('./music_album.json')
+    file = File.read('./data/music_album.json')
     @music_album = JSON.parse(file, { symbolize_names: true })
     @genre = genre
   end
@@ -37,7 +37,7 @@ class MusicAlbumModule
     new_album = { publish_date: publish_date, archived: archived, on_spotify: on_spotify,
                   name: album.genre.name }
     @music_album << new_album
-    File.write('./music_album.json', JSON.dump(@music_album))
+    File.write('./data/music_album.json', JSON.dump(@music_album))
     puts 'Music album is successfully added to catalog'
   end
 end
