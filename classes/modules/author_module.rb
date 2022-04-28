@@ -6,8 +6,8 @@ class AuthorModule
   def initialize
     @storage_file = './data/authors.json'
     if File.exist?(@storage_file)
-    file = JSON.parse(File.read(@storage_file))
-    @authors = file.empty? ? [] : file
+      file = JSON.parse(File.read(@storage_file))
+      @authors = file.empty? ? [] : file
     else
       @authors = []
     end
@@ -16,8 +16,8 @@ class AuthorModule
   def list_all_authors
     puts 'Sorry, there are no authors available at the moment' if @authors.empty?
     if File.exist?(@storage_file)
-    file = JSON.parse(File.read(@storage_file))
-    @authors = file
+      file = JSON.parse(File.read(@storage_file))
+      @authors = file
     else
       @authors = []
     end
