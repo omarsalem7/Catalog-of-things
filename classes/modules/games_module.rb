@@ -8,8 +8,12 @@ class GameModule
 
   def initialize
     @storage_file = './data/games.json'
-    file = JSON.parse(File.read(@storage_file))
-    @games = file.empty? ? [] : file
+    if File.exist?(@storage_file)
+      file = JSON.parse(File.read(@storage_file))
+      @games = file.empty? ? [] : file
+    else
+      @games = []
+    end
   end
 
   def list_all_games
